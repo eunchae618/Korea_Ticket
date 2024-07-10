@@ -1,0 +1,93 @@
+.Header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c5c5c5;
+}
+.Header-left {
+  display: flex;
+  align-items: center;
+  a {
+    color: #000000;
+    text-decoration: none;
+    margin: 20px;
+  }
+}
+
+.icon {
+  width: 150px;
+  height: 60px;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  box-sizing: border-box;
+  width: 30%;
+  height: 500px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.login-form {
+  width: 100%;
+  height: 60%;
+}
+
+.text-box {
+  width: 100%;
+  margin: 20px 0;
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+  }
+  p {
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 5px 0;
+  }
+}
+
+.modal-button {
+  button {
+    width: 100%;
+    height: 50px;
+
+    color: white;
+    background: #ee4e4e;
+    border-radius: 5px;
+    border: 1px solid #ee4e4e;
+  }
+}
+
+.modal-link {
+  a {
+    color: #ee4e4e;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
+  }
+}
