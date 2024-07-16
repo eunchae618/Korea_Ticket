@@ -1,5 +1,75 @@
-.GmImage {
-    margin-top: 1px;
-    width: 60%;
-    height: 200px;
-  }
+/*gameList CSS*/
+.league_ticket {
+ /*border-top: 3px solid black;*/
+ margin-left: 30px; /*왼쪽에 공간 주는 거.*/
+ margin-right: 30px; /*물체 밖에 공간 주는거*/
+ text-align: left; /*텍스트 왼쪽으로 밀기*/
+ color: aliceblue; 
+ padding-left: 30px; /*물체 안에 공간 주는거*/ 
+  
+}
+
+
+.leaguered{
+  background-color: #EE4E4E;
+  height: 200px;
+  /*텍스트 딱 가운데에 오게 해주는 거.*/
+  display: flex; 
+  align-items: center; 
+}
+
+
+
+
+.league-text {
+  color: rgb(161, 161, 161);
+  width: 50;
+}
+ 
+
+
+/*연도 선택 할 수 있는 박스.*/
+.custom-select {
+
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  width: 110px; /* 가로길이 */
+}
+
+.Date{
+  display: flex; /*display라는 속성의 flex 속성 삽입.*/
+  margin-left: 10px;
+  justify-content: end; /*오른쪽으로 정렬*/
+}
+
+
+
+.select-box {
+  margin: 20px 0;
+}
+
+.select-box select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+
+.item {
+  margin: 20px 0;
+  border: 2px solid #e5e5e57d;
+  height: 200px;
+}
+
+
+
+.k-league img{
+  height: 50px;
+  width: 50px;
+  display: flex; 
+  padding-left: 30px; /*물체 안에 공간 주는거.*/
+  padding-top: 30px;
+}
