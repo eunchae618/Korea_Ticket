@@ -1,0 +1,78 @@
+.MyPage {
+  display: flex;
+}
+
+.MyPageIcon {
+  display: flex;
+  align-items: start;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.MyPage-menu {
+  margin-top: 80px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.pwChange-left {
+  width: 20%;
+}
+
+.pwChange-middle {
+  width: 20%;
+}
+
+.pwChangeImage {
+  width: 150px;
+  width: 150px;
+  display: flex;
+  align-items: start;
+  margin-top: 20px;
+}
+.pw-change {
+  width: 150px;
+  display: flex;
+  align-items: start;
+  margin-top: 100px;
+  justify-content: space-around;
+}
+
+.pwChange-right {
+  width: 40%;
+  margin-top: 150px;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+  width: 300px;
+  margin-left: 20px;
+}
+.text {
+  width: 120px;
+}
+
+.button {
+  margin-right: 65px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-style {
+  border: 1px solid #ee4e4e;
+  background-color: #fff;
+  color: #ee4e4e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-style:hover {
+  background-color: #fdd;
+}

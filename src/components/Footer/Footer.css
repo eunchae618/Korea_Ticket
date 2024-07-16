@@ -1,0 +1,12 @@
+.footer-box {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #f5f5f5;
+
+  p {
+    margin: 5px;
+    font-size: 10px;
+  }
+}

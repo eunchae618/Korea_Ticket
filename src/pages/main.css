@@ -1,10 +1,71 @@
+.main {
+  display: flex;
+  align-items: center;
+}
 .mainImage {
-  margin-top: 1px;
+  width: 1440px;
+  height: 300px;
+}
+
+.vsTeamWrapper {
+  background-image: url("../assets/images/mainImage.png");
   width: 100%;
-  height: 250px;
+  height: 400px;
+  padding: 0 100px;
+
+  display: flex;
+  justify-content: flex-start;
+}
+.vsTeamText {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .vsTeam {
-  width: 300px;
-  height: 150px;
+  padding-bottom: 15px;
+  margin: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.vsInformation {
+  font-size: 15px;
+}
+
+.booking-box {
+  width: 150px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+
+  font-size: 18px;
+
+  a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: center;
+
+    color: #000000;
+
+    text-decoration: none;
+  }
+}
+
+.search-box {
+  position: absolute;
+  width: 600px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 200px;
+  left: 465px;
+  background: #ffffff;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
 }
