@@ -55,8 +55,9 @@
     width: 52px;
     right: 0;
     margin-right: 42px;
-    display: flex;
+    /* display: flex; */
     align-items: left;
+    
   }
 
 
