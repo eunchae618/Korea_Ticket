@@ -16,7 +16,7 @@ const myPage = () => {
           <Link to="/myPage/Q&APage">
             <div className="menu">문의사항</div>
           </Link>
-          <Link to="/myPage/pwChange">
+          <Link to="/myPage/pswChange">
             <div className="menu">비밀번호 변경</div>
           </Link>
           <div className="menu">회원탈퇴</div>

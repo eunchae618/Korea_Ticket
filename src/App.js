@@ -7,7 +7,7 @@ import GameList from "./pages/gameList";
 import BookingPage from "./pages/bookingPage";
 import ReviewBoard from "./pages/reviewBoard";
 import SeatingChart from "./pages/seatingChart";
-import PwChange from "./pages/pwChange";
+import PswChange from "./pages/pswChange";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route path="/myPage" element={<MyPage />} />
         <Route path="/reviewBoard" element={<ReviewBoard />} />
         <Route path="/seatingChart" element={<SeatingChart />} />
-        <Route path="/myPage/pwChange" element={<PwChange />} />
+        <Route path="/myPage/pswChange" element={<PswChange />} />
       </Routes>
     </div>
   );

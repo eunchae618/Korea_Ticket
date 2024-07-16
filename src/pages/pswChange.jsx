@@ -3,7 +3,7 @@ import MyPage from "../assets/images/MyPage.png";
 import PwChange from "../assets/images/PwChange.png";
 import "./pwChange.css";
 import { Link } from "react-router-dom";
-const pwChange = () => {
+const pswChange = () => {
   return (
     <div className="MyPage">
       <div className="pwChange-left">
@@ -16,7 +16,7 @@ const pwChange = () => {
           <Link to="/myPage/Q&APage">
             <div className="menu">문의사항</div>
           </Link>
-          <Link to="/myPage/pwChange">
+          <Link to="/myPage/pswChange">
             <div className="menu">비밀번호 변경</div>
           </Link>
           <div className="menu">회원탈퇴</div>
@@ -58,4 +58,4 @@ const pwChange = () => {
   );
 };
 
-export default pwChange;
+export default pswChange;
