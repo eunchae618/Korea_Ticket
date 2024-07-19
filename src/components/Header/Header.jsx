@@ -1,9 +1,8 @@
 import React, { useState, useRef } from "react";
 import "./Header.css";
-import icon from "../../assets/images/icon.png";
-import join from "../../assets/images/join.png";
+
 import { Link } from "react-router-dom";
-import password from "../../assets/images/password.png";
+
 const Header = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [joinModalOpen, setJoinModalOpen] = useState(false);
@@ -14,10 +13,12 @@ const Header = () => {
       <div className="Header">
         <div className="Header-left">
           <Link to="/">
-            <img className="icon" src={icon} alt="국산 티켓 아이콘" />
+            <div className="icon">🍀 국산 티켓</div>
           </Link>
-          <Link to="/gameList">티켓 구매하기</Link>
-          <Link to="/reviewBoard">후기 게시판</Link>
+          <div className="head-text">
+            <Link to="/gameList">티켓 구매하기</Link>
+            <Link to="/reviewBoard">후기 게시판</Link>
+          </div>
         </div>
         <div className="Header-right">
           <div onClick={() => setModalOpen(true)}>로그인</div>
@@ -34,18 +35,14 @@ const Header = () => {
           }}
         >
           <div className={"modal-content"}>
-            <img
-              className="icon"
-              src={icon}
-              style={{ marginBottom: "40px" }}
-              alt="국산 티켓 아이콘"
-            />
+            <div className="icon">🍀국산티켓</div>
+
             <form className="login-form">
-              <div className="text-box">
+              <div className="login-text">
                 <p>이메일</p>
                 <input type="text" placeholder="이메일을 입력해주세요." />
               </div>
-              <div className="text-box">
+              <div className="login-text">
                 <p>비밀번호</p>
                 <input type="password" placeholder="비밀번호를 입력해주세요." />
               </div>
@@ -85,12 +82,8 @@ const Header = () => {
           }}
         >
           <div className={"modal-content"}>
-            <img
-              className="join"
-              src={join}
-              style={{ marginBottom: "40px" }}
-              alt="회원가입"
-            />
+            <div className="join">🍀회원가입</div>
+
             <form className="join-form">
               <div className="join-text">
                 <p>이름</p>
@@ -114,6 +107,15 @@ const Header = () => {
               <div className="modal-joinbutton">
                 <button>회원가입</button>
               </div>
+              <div
+                className="join-backButton"
+                onClick={() => {
+                  setJoinModalOpen(false);
+                  setModalOpen(true);
+                }}
+              >
+                <button>뒤로가기</button>
+              </div>
             </form>
           </div>
         </div>
@@ -129,27 +131,31 @@ const Header = () => {
           }}
         >
           <div className={"modal-content"}>
-            <img
-              className="password"
-              src={password}
-              style={{ marginBottom: "40px" }}
-              alt="비밀번호 찾기 아이콘"
-            />
+            <div className="password">🍀비밀번호 찾기</div>
             <form className="login-form">
-              <div className="text-box">
+              <div className="pw-text">
                 <p>아이디</p>
                 <input type="text" placeholder="이메일을 입력해주세요." />
               </div>
-              <div className="text-box">
+              <div className="pw-text">
                 <p>이름</p>
                 <input type="text" placeholder="이름을 입력해주세요." />
               </div>
-              <div className="text-box">
+              <div className="pw-text">
                 <p>이메일</p>
                 <input type="password" placeholder="이메일을 입력해주세요." />
               </div>
-              <div className="modal-button">
+              <div className="modal-backButton">
                 <button>비밀번호 찾기</button>
+              </div>
+              <div
+                className="pw-backButton"
+                onClick={() => {
+                  setPasswordModalOpen(false);
+                  setModalOpen(true);
+                }}
+              >
+                <button>뒤로가기</button>
               </div>
             </form>
           </div>

@@ -8,7 +8,8 @@ import BookingPage from "./pages/bookingPage";
 import ReviewBoard from "./pages/reviewBoard";
 import SeatingChart from "./pages/seatingChart";
 import PswChange from "./pages/pswChange";
-
+import Quit from "./pages/quit";
+import QnaPage from "./pages/QaPage";
 function App() {
   return (
     <div className="App">
@@ -21,6 +22,8 @@ function App() {
         <Route path="/reviewBoard" element={<ReviewBoard />} />
         <Route path="/seatingChart" element={<SeatingChart />} />
         <Route path="/myPage/pswChange" element={<PswChange />} />
+        <Route path="/myPage/quit" element={<Quit />} />
+        <Route path="/myPage/QaPage" element={<QnaPage />} />
       </Routes>
     </div>
   );

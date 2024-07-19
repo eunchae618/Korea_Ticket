@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 .Header {
   width: 100%;
   height: 80px;
@@ -5,6 +13,8 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #c5c5c5;
+  font-family: "NPSfontBold";
+  padding: 1%;
 }
 .Header-left {
   display: flex;
@@ -16,9 +26,18 @@
   }
 }
 
+.Header-right {
+  cursor: pointer;
+}
+
+.head-text {
+  font-family: "NPSfontBold";
+}
 .icon {
-  width: 150px;
-  height: 60px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
 }
 
 .modal-container {
@@ -31,9 +50,11 @@
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
+  font-family: "NPSfontBold";
 }
 
 .modal-content {
+  font-family: "NPSfontBold";
   box-sizing: border-box;
   width: 30%;
   height: 500px;
@@ -42,6 +63,7 @@
   border-radius: 20px;
   padding: 30px;
   display: flex;
+
   flex-direction: column;
   align-items: center;
   box-shadow:
@@ -54,42 +76,45 @@
   height: 60%;
 }
 
-.text-box {
+.login-text {
   width: 100%;
-  margin: 20px 0;
+  margin: 5% 0;
   input {
     box-sizing: border-box;
     width: 100%;
     height: 40px;
     border-radius: 5px;
     border: 1px solid #000000;
+    font-family: "NPSfontBold";
   }
   p {
     box-sizing: border-box;
     font-size: 15px;
     margin: 5px 0;
+    font-family: "NPSfontBold";
   }
 }
 
 .modal-button {
+  margin-top: 10%;
   button {
     width: 100%;
     height: 50px;
-
+    font-family: "NPSfontBold";
     color: white;
     background: #ee4e4e;
     border-radius: 5px;
     border: 1px solid #ee4e4e;
-    margin-bottom: 20px;
   }
 }
 .modal-menu {
   color: #ee4e4e;
   font-size: 15px;
   margin: 10px;
-  margin-top: 20px;
+  margin-top: 10%;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .modal-join {
@@ -102,8 +127,10 @@
 }
 
 .join {
-  width: 150px;
-  height: 60px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5%;
 }
 
 .join-form {
@@ -114,17 +141,20 @@
 .join-text {
   width: 100%;
   margin: 10px 0;
+  margin-bottom: 4%;
   input {
     box-sizing: border-box;
     width: 100%;
     height: 30px;
     border-radius: 5px;
     border: 1px solid #000000;
+    font-family: "NPSfontBold";
   }
   p {
     box-sizing: border-box;
     font-size: 15px;
     margin: 5px 0;
+    font-family: "NPSfontBold";
   }
 }
 
@@ -132,18 +162,92 @@
   button {
     width: 100%;
     height: 40px;
-
+    font-family: "NPSfontBold";
     color: white;
     background: #ee4e4e;
     border-radius: 5px;
     border: 1px solid #ee4e4e;
+    cursor: pointer;
+  }
+}
+.modal-joinbutton {
+  button {
+    width: 100%;
+    height: 40px;
+    font-family: "NPSfontBold";
+    color: white;
+    background: #ee4e4e;
+    border-radius: 5px;
+    border: 1px solid #ee4e4e;
+    cursor: pointer;
+  }
+}
+.join-backButton {
+  button {
+    margin-top: 3%;
+    width: 100%;
+    height: 40px;
+    font-family: "NPSfontBold";
+    color: white;
+    background: #b0b0b0;
+    border-radius: 5px;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
   }
 }
 
 .password {
-  width: 250px;
-  height: 60px;
+  font-size: 50px;
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-bottom: 5%;
+}
+
+.pw-text {
+  width: 100%;
+  margin: 10px 0;
+  margin-bottom: 4%;
+  display: flex;
+  flex-direction: column;
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-family: "NPSfontBold";
+  }
+  p {
+    box-sizing: border-box;
+    font-size: 15px;
+    margin: 5px 0;
+    font-family: "NPSfontBold";
+  }
+}
+.modal-backButton {
+  button {
+    margin-top: 5%;
+    width: 100%;
+    height: 40px;
+    font-family: "NPSfontBold";
+    color: white;
+    background: #ee4e4e;
+    border-radius: 5px;
+    border: 1px solid #ee4e4e;
+    cursor: pointer;
+  }
+}
+
+.pw-backButton {
+  button {
+    margin-top: 3%;
+    width: 100%;
+    height: 40px;
+    font-family: "NPSfontBold";
+    color: white;
+    background: #b0b0b0;
+    border-radius: 5px;
+    border: 1px solid #b0b0b0;
+    cursor: pointer;
+  }
 }
