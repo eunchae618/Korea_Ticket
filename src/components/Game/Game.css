@@ -1,11 +1,11 @@
 .Game {
-  background-color: #ff0000e6;
-  margin: 20px 0;
-  border: 2px solid #c300ff;
-  height: 250px;
-  width: 100%;
+  background-color: #ffffffe6;
+  margin: 20px 0; /*물체 밖 여백 줌*/
+  border: 1px solid #acacac; /*물체 밖 선 그림. 박스*/
+  height: 250px; /*세로*/
+  width: 100%; /*가로*/
   display: flex;
-  padding: 0 5%;
+  padding: 0 5%; /*물체 안 여백 줌*/
   box-sizing: border-box;
 }
 
@@ -18,8 +18,10 @@
 }
 
 .game-left {
+  /*경기 시간 & 날짜 & 위치*/
+  line-height: 2;
   margin-bottom: 18px;
-  background-color: rgb(0, 204, 255);
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: left;
   flex-direction: column;
@@ -33,7 +35,7 @@
 .time {
   /* padding-left: 30px; */
   margin-bottom: 8px;
-  font-size: 24px;
+  font-size: 21px;
 }
 
 .date {
@@ -46,23 +48,91 @@
   font-size: 13px;
 }
 
-.jb {
-  height: 52px;
-  width: 52px;
-  right: 0;
-  margin-right: 42px;
-  display: flex;
-  align-items: left;
-}
-
 .game-center {
-  background-color: rgb(255, 234, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
   width: 60%;
   height: 100%;
 }
 
+.game-center-left {
+  display: flex; /*수직으로 정렬*/
+  flex-direction: column; /*세로로 정렬 되어있는 것을 가로로 정렬해줌*/
+  align-items: center; /*가로로 정렬 되어있는거 가운데로*/
+  justify-content: center; /*찐가운데정렬*/
+  height: 100%;
+  width: 40%;
+  background-color: rgb(255, 255, 255);
+}
+
+.juI {
+  /*전북 이미지*/
+  height: 80px;
+  width: 80px;
+}
+
+.jb {
+  /*전북 글씨*/
+  font-weight: bold;
+}
+
+.game-center-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  background-color: rgb(255, 255, 255);
+}
+.vs {
+  background-color: rgb(255, 255, 255);
+}
+
+.game-center-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 40%;
+  background-color: rgb(255, 255, 255);
+}
+
+.woI {
+  /*울산 이미지*/
+  height: 80px;
+  width: 80px;
+}
+
+.wo {
+  /*울산 글씨*/
+  font-weight: bold;
+}
+
 .game-right {
-  background-color: rgb(47, 255, 0);
+  background-color: rgb(255, 255, 255);
   width: 20%;
   height: 100%;
+}
+
+.game-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tk-button {
+  border: 1px solid #ee4e4e;
+  background-color: #fff;
+  color: #ee4e4e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tk-button:hover {
+  background-color: #fdd;
 }
