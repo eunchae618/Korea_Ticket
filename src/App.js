@@ -5,7 +5,9 @@ import MyPage from "./pages/myPage";
 import Inquiries from "./pages/inquiries";
 import GameList from "./pages/gameList";
 import FinalTicket from "./components/Game/FinalTicket";
-import ReviewBoard from "./pages/reviewBoard";
+import ReviewBoard from "./pages/ReviewBoard";
+import ReviewDetail from "./pages/ReviewDetail";
+import ReviewWrite from "./pages/ReviewWrite";
 import Seat from "./components/Game/Seat";
 import PswChange from "./pages/pswChange";
 import Quit from "./pages/quit";
@@ -20,6 +22,8 @@ function App() {
         <Route path="/inquiries" element={<Inquiries />} />
         <Route path="/myPage" element={<MyPage />} />
         <Route path="/reviewBoard" element={<ReviewBoard />} />
+        <Route path="/reviewBoard/:idx" element={<ReviewDetail />} />
+        <Route path="/reviewWrite" element={<ReviewWrite />} />
         <Route path="/Seat" element={<Seat />} />
         <Route path="/myPage/pswChange" element={<PswChange />} />
         <Route path="/myPage/quit" element={<Quit />} />

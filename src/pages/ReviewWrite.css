@@ -1,0 +1,67 @@
+.ReviewWrite {
+  padding: 0 120px;
+}
+.ReviewWrite-head {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 3%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+.ReviewWrite-back_to_list {
+  text-decoration: underline;
+  color: #959595;
+  padding-bottom: 1%;
+}
+.ReviewWrite-page_title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.ReviewWrite-input_title {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+.ReviewWrite-title_box {
+  display: flex;
+  width: 90%;
+  height: 25px;
+  border-radius: 5px;
+}
+.ReviewWrite-input_content {
+  display: flex;
+  justify-content: start;
+  margin-top: 1%;
+}
+.ReviewWrite-content_box {
+  width: 90%;
+  height: 300px;
+  border-radius: 5px;
+}
+.ReviewWrite-input_image {
+  display: flex;
+  justify-content: start;
+  margin: 1% 4%;
+}
+.ReviewWrite-confirm_button {
+  display: flex;
+  justify-content: end;
+  margin: 1% 7%;
+}
+.ReviewWrite-button {
+  width: 80px;
+  height: 30px;
+  color: #ee4e4e;
+  background-color: white;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #ee4e4e;
+  cursor: pointer;
+}
+.ReviewWrite-button:hover {
+  background-color: #ee4e4e;
+  color: white;
+}
