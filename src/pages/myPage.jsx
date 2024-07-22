@@ -8,4 +8,3 @@ const myPage = () => {
 }
 
 export default myPage;
-

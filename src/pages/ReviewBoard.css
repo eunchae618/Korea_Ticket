@@ -1,0 +1,80 @@
+.ReviewBoard {
+  padding: 0 120px;
+}
+.ReviewBoard-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+.ReviewBoard-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 20%;
+  justify-content: space-around;
+}
+.ReviewBoard-list-row1 {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4%;
+}
+.ReviewBoard-list-row2 {
+  display: flex;
+  justify-content: space-around;
+}
+.ReviewBoard-noprofile {
+  width: 10%;
+  height: 10%;
+}
+.ReviewBoard-post {
+  padding: 0 9%;
+  display: flex;
+  flex-direction: column;
+}
+.ReviewBoard-post-title {
+  display: flex;
+  justify-content: start;
+}
+.ReviewBoard-post-content {
+  display: flex;
+  justify-content: start;
+}
+.thumb1 {
+  object-fit: cover;
+  width: 340px;
+  height: 230px;
+}
+.thumb2 {
+  object-fit: cover;
+  width: 340px;
+  height: 230px;
+}
+.thumb3 {
+  object-fit: cover;
+  width: 340px;
+  height: 230px;
+}
+.thumb4 {
+  object-fit: cover;
+  width: 340px;
+  height: 230px;
+}
+.ReviewBoard-write_button {
+  display: flex;
+  justify-content: end;
+  padding: 1% 7%;
+}
+.ReviewBoard-button {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  color: #ee4e4e;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #ee4e4e;
+  cursor: pointer;
+}
+.ReviewBoard-button:hover {
+  background-color: #ee4e4e;
+  color: white;
+}

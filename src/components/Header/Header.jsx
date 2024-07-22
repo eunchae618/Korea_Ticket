@@ -13,7 +13,7 @@ const Header = () => {
             <img className="icon" src={icon} alt="국산 티켓 아이콘" />
           </Link>
           <Link to="/gameList">티켓 구매하기</Link>
-          <Link to="/reviewBoard">후기 게시판</Link>
+          <Link to="/review-board">후기 게시판</Link>
         </div>
         <div className="Header-right">
           <div onClick={() => setModalOpen(true)}>로그인</div>
