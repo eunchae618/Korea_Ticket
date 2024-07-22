@@ -28,7 +28,7 @@ const pswChange = () => {
       </div>
 
       <div className="pwChange-middle">
-        <h3 className="pw-change">비밀번호 변경</h3>
+        <h3 className="pw-change">🐯 비밀번호 변경</h3>
         <img
           className="pwChangeImage"
           src={PwChange}
@@ -54,7 +54,7 @@ const pswChange = () => {
             <input type="password" />
           </div>
         </div>
-        <div className="button">
+        <div className="change-button">
           <button className="button-style">변경</button>
         </div>
       </div>

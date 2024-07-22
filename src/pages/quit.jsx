@@ -60,11 +60,12 @@ const quit = () => {
 
           <div className="pw-input">
             <div className="pw-text">
-              비밀번호
+              <div className="psw-text">비밀번호</div>
               <div className="password-input">
                 <input type="password"></input>
+
+                <button className="quit-button">탈퇴</button>
               </div>
-              <button className="quit-button">탈퇴</button>
             </div>
           </div>
         </div>

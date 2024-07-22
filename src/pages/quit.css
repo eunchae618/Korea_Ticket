@@ -51,7 +51,6 @@
 .war-text {
   display: flex;
   align-items: flex-start;
-  flex-direction: row;
   justify-content: flex-start;
   margin-left: 3%;
   margin-top: 5%;
@@ -64,31 +63,38 @@
 }
 
 .pw-input {
+  width: 50%;
   display: flex;
   margin-top: 3%;
   margin-left: 3%;
   flex-direction: row;
 }
+.psw-text {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 3%;
+}
 .pw-text {
-  width: 100%;
   display: flex;
   font-family: "NPSfontBold";
+  justify-content: start;
 }
 .password-input {
   display: flex;
-  margin-left: 10%;
+  flex-direction: row;
 }
 
 .quit-button {
+  width: 50px;
+  height: 30px;
   border: 1px solid #ee4e4e;
   background-color: #fff;
   color: #ee4e4e;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 5%;
   font-family: "NPSfontBold";
+  margin-left: 3%;
 }
-
 .quit-button:hover {
   background-color: #fdd;
 }

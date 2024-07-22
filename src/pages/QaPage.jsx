@@ -24,13 +24,13 @@ const QaPage = () => {
     },
     {
       num: 3,
-      classification: "결제문의",
+      classification: "결제 문의",
       name: "좌석 관련 문의합니다.",
       day: "24.07.02",
     },
     {
       num: 2,
-      classification: "결제문의",
+      classification: "결제 문의",
       name: "카드 결제 관련 문의합니다.",
       day: "24.07.01",
     },

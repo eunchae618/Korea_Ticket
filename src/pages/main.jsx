@@ -193,7 +193,7 @@ const main = () => {
             <p>2024. 07.03(수) 17:00</p>
             <p>상암 월드컵 경기장</p>
             <div className="booking-box">
-              <Link to="/bookingPage"> 지금 예매하기</Link>
+              <Link to="/gameList"> 지금 예매하기</Link>
             </div>
           </div>
         </div>

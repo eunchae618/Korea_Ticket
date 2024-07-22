@@ -28,27 +28,3 @@
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-<<<<<<< HEAD
-
-html,
-body {
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-=======
->>>>>>> 993d3900d7135f55f7583323a9bcb6a8137c62fe
