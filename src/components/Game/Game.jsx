@@ -34,8 +34,8 @@ const Game = () => {
           <div className="game-center-left">
             <img
               src="https://blog.kakaocdn.net/dn/caJIG3/btqystWn77G/qSsCPcDD4w4oMkrKmkiZGK/img.jpg"
-              alt="전북이미지"
-              className="juI"
+              alt="홈 로고"
+              className="hoM"
             />
             <p className="jb">전북</p>
           </div>
@@ -47,8 +47,8 @@ const Game = () => {
           <div className="game-center-right">
             <img
               src="https://th.bing.com/th/id/OIP.shn6rgirzpNZ7IdT9p39WAHaI6?rs=1&pid=ImgDetMain"
-              alt="울산이미지"
-              className="woI"
+              alt="어웨이 로고"
+              className="awY"
             />
             <p className="wo">울산</p>
           </div>

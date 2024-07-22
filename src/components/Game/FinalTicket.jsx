@@ -40,15 +40,15 @@ const FinalTicket = () => {
         </div>
 
         <div>
-          <p>2024.07.20 (토)</p>
+          <p className="qw">2024.07.20 (토)</p>
         </div>
 
         <div>
-          <p>전주월드컵경기장(HOME)</p>
+          <p className="er">전주월드컵경기장(HOME)</p>
         </div>
 
         <div>
-          <p> 👨‍👩‍👧‍👦 42,000명 수용 가능</p>
+          <p className="ty"> 👨‍👩‍👧‍👦 42,000명 수용 가능</p>
         </div>
 
         <div>

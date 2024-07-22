@@ -1,11 +1,19 @@
 /*gameList CSS*/
+
 .league_ticket {
-  /*border-top: 3px solid black;*/
   margin-left: 30px; /*왼쪽에 공간 주는 거.*/
   margin-right: 30px; /*물체 밖에 공간 주는거*/
   text-align: left; /*텍스트 왼쪽으로 밀기*/
   color: aliceblue;
   padding-left: 30px; /*물체 안에 공간 주는거*/
+}
+
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 
 .leaguered {

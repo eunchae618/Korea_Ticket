@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Seat.css";
+import JBS from "../../assets/images/seatimg/jeonbukS.png";
 
 const Seat = () => {
   const [selectedSeat, setSelectedSeat] = useState(""); // 초기값을 ""로 설정
@@ -11,11 +12,7 @@ const Seat = () => {
   return (
     <div className="tk">
       <p className="kk">🎫 전북 VS 울산 티켓 예매하기</p>
-      <img
-        src="https://hyundai-motorsfc.com/img/seat_2024.f98e5d45.jpeg"
-        alt="구장이미지"
-        className="tkI"
-      />
+      <img src={JBS} alt="구장이미지" className="tkI" />
       <div>
         <div className="Seat-choose">
           <select value={selectedSeat} onChange={handleSelectChange}>
