@@ -1,0 +1,113 @@
+.Form {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95%;
+  height: 500px;
+  margin: 20px 60px;
+}
+
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.stadiuM {
+  /*구장 이미지*/
+  display: flex;
+  height: 90%;
+  width: 90%;
+  margin: 20px 0;
+}
+
+.Confirmation-left {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+  width: 40%;
+}
+
+.Confirmation-right {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+
+  flex-direction: column;
+
+  height: 70%; /*세로*/
+  width: 50%; /*가로*/
+}
+
+.logo-left {
+  /*로고1*/
+  height: 13%;
+  width: 13%;
+}
+
+.logo-right {
+  /*로고2*/
+  height: 13%;
+  width: 13%;
+}
+
+.er {
+  display: flex;
+  margin-top: 45px;
+  justify-content: center;
+  align-items: center;
+}
+
+.er img {
+  margin: 0px 10px;
+}
+
+.people-choose {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  margin-left: 180px;
+  align-items: center;
+}
+
+.Ticketing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  margin-left: 190px;
+  margin-top: -25px;
+}
+
+.tk-button {
+  border: 1px solid #ee4e4e;
+  background-color: #fff;
+  color: #ee4e4e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tk-button:hover {
+  background-color: #fdd;
+}
+
+.rr {
+  font-family: "NPSfontBold";
+}
+
+.qw {
+  font-family: "NPSfontBold";
+}
+
+.er {
+  font-family: "NPSfontBold";
+}
+
+.ty {
+  font-family: "NPSfontBold";
+}

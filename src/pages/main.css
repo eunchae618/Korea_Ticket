@@ -1,10 +1,241 @@
-.mainImage {
-  margin-top: 1px;
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.vsTeamWrapper {
+  background-image: url("../assets/images/mainImage.png");
   width: 100%;
-  height: 250px;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+}
+.vsTeamText {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .vsTeam {
-  width: 300px;
-  height: 150px;
+  padding-bottom: 15%;
+  margin: 10px;
+  color: white;
+  font-size: 30px;
+  font-family: "NPSfontBold";
+}
+
+.vsInformation {
+  font-size: 15px;
+  font-family: "NPSfontBold";
+}
+
+.booking-box {
+  width: 150px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+
+  a {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700px;
+    font-size: 16px;
+    line-height: center;
+    align-items: center;
+
+    color: #000000;
+    font-family: "NPSfontBold";
+    text-decoration: none;
+  }
+}
+
+.TeamFind {
+  width: 100%;
+  margin-top: 3%;
+}
+.Team {
+  font-family: "NPSfontBold";
+  margin-bottom: 5%;
+}
+.slider-contaioner {
+  padding: 0;
+  width: 100%;
+}
+
+.slice-slice {
+  width: 200px;
+  height: 250px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #b0b0b0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  font-family: "NPSfontBold";
+}
+.main-Board {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.Board-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin-bottom: 10%;
+    font-family: "NPSfontBold";
+  }
+}
+.Board-left {
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dedede;
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: "NPSfontBold";
+  }
+}
+.PlayDay {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 80%;
+  font-size: 35px;
+  height: 40%;
+  margin-bottom: 5%;
+  border-bottom: 1px solid #dedede;
+  font-family: "NPSfontBold";
+}
+
+.rv-first {
+  margin-top: 5%;
+  display: flex;
+
+  justify-content: space-around;
+}
+
+.rv-second {
+  margin-top: 5%;
+  display: flex;
+
+  justify-content: space-around;
+}
+
+.pic {
+  margin-bottom: 5%;
+}
+
+.rv-text {
+  font-family: "NPSfontBold";
+}
+.BuyTicket {
+  text-decoration: none;
+}
+
+.rank-wrapper {
+  width: 100%;
+  height: 1000px;
+}
+.rank-title {
+  font-size: 30px;
+  margin-top: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "NPSfontBold";
+}
+.rank-table {
+  width: 100%;
+  margin-top: 5%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.rank-table th,
+.rank-table td {
+  border-bottom: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  font-family: "NPSfontBold";
+}
+
+.rank-table thead th {
+  background-color: #f2f2f2;
+}
+
+.tr-team {
+  display: flex;
+  align-items: center; /* 이미지와 텍스트를 수직으로 정렬 */
+  gap: 50px; /* 이미지와 텍스트 사이에 10px 간격 추가 */
+}
+.PlayDay2 {
+  margin-left: 10%;
+  width: 80%;
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: "NPSfontBold";
+}
+.Day-font {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Play-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vs-Date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-vrs {
+  width: 50px;
+  width: 50px;
+}
+
+.vrs-name2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.vrs-name1 {
+  color: #b0b0b0;
+  font-size: 18px;
 }

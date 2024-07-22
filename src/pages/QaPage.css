@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+.QaPage-left {
+  width: 30%;
+}
+
+.QaPage-right {
+  width: 60%;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.QaIcon {
+  width: 200px;
+  margin-top: 15%;
+  display: flex;
+  font-size: 25px;
+  font-family: "NPSfontBold";
+  margin-bottom: 5%;
+}
+
+.QnAList {
+  width: 100%;
+}
+.List-name {
+  width: 800px;
+  border-bottom: 1px solid #c5c5c5;
+  display: flex;
+  justify-content: space-around;
+  font-family: "NPSfontBold";
+}
+
+.QnA-table {
+  width: 100%;
+  margin-top: 5%;
+
+  border-collapse: collapse;
+}
+
+.QnA-table th,
+.QnA-table td {
+  border-bottom: 1px solid #c5c5c5;
+  padding: 8px;
+  text-align: center;
+  font-family: "NPSfontBold";
+}
+.rank-table thead th {
+  background-color: #f2f2f2;
+}
+.tr-border {
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,135 @@
+.Game {
+  margin: 20px 0; /*물체 밖 여백 줌*/
+  border: 1px solid #acacac; /*물체 밖 선 그림. 박스*/
+  height: 250px; /*세로*/
+  width: 100%; /*가로*/
+  display: flex;
+  padding: 0 5%; /*물체 안 여백 줌*/
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.gmImage {
+  /* k리그 로고*/
+  height: 30%; /*세로*/
+  width: 60%; /*가로*/
+  display: flex;
+  padding-top: 10%;
+}
+
+.game-left {
+  /*경기 시간 & 날짜 & 위치*/
+  line-height: 2;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  text-align: left;
+  padding-left: 5%;
+}
+
+.time {
+  font-family: "NPSfontBold";
+  margin-bottom: 8px;
+  font-size: 21px;
+}
+
+.date {
+  font-family: "NPSfontBold";
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.stadium {
+  font-family: "NPSfontBold";
+  font-size: 13px;
+}
+
+.game-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+}
+
+.game-center-left {
+  display: flex; /*수직으로 정렬*/
+  flex-direction: column; /*세로로 정렬 되어있는 것을 가로로 정렬해줌*/
+  align-items: center; /*가로로 정렬 되어있는거 가운데로*/
+  justify-content: center; /*찐가운데정렬*/
+  height: 100%;
+  width: 40%;
+}
+
+.hoM {
+  /*홈 로고*/
+  height: 40%;
+  width: 40%;
+}
+
+.jb {
+  /*전북 글씨*/
+  font-family: "NPSfontBold";
+  font-weight: bold;
+}
+
+.game-center-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+}
+
+.game-center-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 40%;
+}
+
+.awY {
+  /*어웨이 로고*/
+  height: 40%;
+  width: 40%;
+}
+
+.wo {
+  /*울산 글씨*/
+  font-family: "NPSfontBold";
+  font-weight: bold;
+}
+
+.game-right {
+  width: 20%;
+  height: 100%;
+}
+
+.game-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tk-button {
+  border: 1px solid #ee4e4e;
+  background-color: #fff;
+  color: #ee4e4e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tk-button:hover {
+  background-color: #fdd;
+}

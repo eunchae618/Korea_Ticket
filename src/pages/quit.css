@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.quit-left {
+  width: 30%;
+}
+
+.quit-middle {
+  width: 70%;
+}
+
+.quit-text {
+  width: 100px;
+  margin-top: 15%;
+  margin-left: 1.5%;
+  font-family: "NPSfontBold";
+}
+
+.quit-warring {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  align-items: start;
+  margin-left: 3%;
+  font-family: "NPSfontBold";
+  margin-bottom: 5%;
+}
+
+.ul-text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 0%;
+  font-family: "NPSfontBold";
+}
+
+.ul-text2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 3%;
+  margin-left: 0%;
+  font-family: "NPSfontBold";
+}
+
+.war-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 3%;
+  margin-top: 5%;
+  font-family: "NPSfontBold";
+}
+
+.text-color {
+  margin-left: 5px;
+  color: red;
+}
+
+.pw-input {
+  width: 50%;
+  display: flex;
+  margin-top: 3%;
+  margin-left: 3%;
+  flex-direction: row;
+}
+.psw-text {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 3%;
+}
+.pw-text {
+  display: flex;
+  font-family: "NPSfontBold";
+  justify-content: start;
+}
+.password-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.quit-button {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #ee4e4e;
+  background-color: #fff;
+  color: #ee4e4e;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "NPSfontBold";
+  margin-left: 3%;
+}
+.quit-button:hover {
+  background-color: #fdd;
+}

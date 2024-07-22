@@ -1,0 +1,53 @@
+.tk {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 900px;
+  margin: 20px 0; /*물체 밖 위에 공간 20px 주기*/
+}
+
+.kk {
+  /*맨 위에 vs */
+  padding-left: 5%;
+  background-color: rgb(255, 255, 255);
+  padding-top: 10px;
+  width: 30%;
+  height: 5%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.tkI {
+  /*구장 이미지*/
+  width: 50%;
+  height: 60%;
+}
+
+.Seat-choose {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: left; */
+  justify-content: center;
+  padding-left: 50%;
+  padding-top: 3%;
+}
+
+.Buy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  margin-left: 50%;
+  margin-top: 2%;
+}
+
+.tk-button {
+  border: 1px solid #ee4e4e;
+  background-color: #fff;
+  color: #ee4e4e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tk-button:hover {
+  background-color: #fdd;
+}

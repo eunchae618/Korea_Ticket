@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.MyPage {
+  display: flex;
+}
+.MyPageIcon {
+  display: flex;
+  width: 200px;
+  align-items: start;
+  margin-top: 30px;
+  margin-left: 40px;
+  font-size: 28px;
+
+  font-family: "NPSfontBold";
+  color: #000000;
+}
+
+.ticket-list {
+  margin-top: 15%;
+  width: 400px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  font-family: "NPSfontBold";
+}
+.ticket-explanation {
+  display: flex;
+  margin-top: 20px;
+  width: 400px;
+  justify-content: start;
+  align-items: start;
+  font-family: "NPSfontBold";
+}
+
+.MyPage-menu {
+  margin-top: 80px;
+  width: 200px;
+  a {
+    width: 200px;
+    text-decoration: none;
+    color: black;
+    font-family: "NPSfontBold";
+  }
+}
+.menu {
+  width: 200px;
+  height: 50px;
+  justify-content: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c5c5c5;
+  margin-left: 40px;
+  font-family: "NPSfontBold";
+}
+.menu:hover {
+  color: red;
+}
+
+.MyPage-left {
+  width: 30%;
+  text-decoration: none;
+}
+
+.MyPage-right {
+  width: 70%;
+}
+.ticket-calender {
+  display: flex;
+  justify-content: end;
+  margin-right: 21%;
+  margin-top: 50px;
+}
+.information {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background: #c5c5c5;
+  display: flex;
+  width: 800px;
+  margin-top: 50px;
+  justify-content: space-around;
+  font-family: "NPSfontBold";
+  a {
+    color: #000000;
+    text-decoration: none;
+    margin: 20px;
+  }
+}
+.information2 {
+  display: flex;
+  border-bottom: 1px solid black;
+  width: 800px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  font-family: "NPSfontBold";
+}
+
+.information-button {
+  display: flex;
+  width: 800px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
