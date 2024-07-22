@@ -13,7 +13,6 @@
   align-items: center;
   border-bottom: 1px solid #c5c5c5;
   font-family: "NPSfontBold";
-  padding: 1%;
 }
 .Header-left {
   display: flex;
@@ -27,6 +26,7 @@
 
 .Header-right {
   cursor: pointer;
+  margin-right: 3%;
 }
 
 .head-text {

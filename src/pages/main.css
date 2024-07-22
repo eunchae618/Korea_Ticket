@@ -6,8 +6,16 @@
   font-style: normal;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* 화면 너비 초과 방지 */
+}
+
 .main {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -19,8 +27,9 @@
 .vsTeamWrapper {
   background-image: url("../assets/images/mainImage.png");
   width: 100%;
+  height: 400px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start; /* 중복 스타일 제거 */
 }
 
 .vsTeamText {
@@ -29,11 +38,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-left: 5%;
 }
 
 .vsTeam {
   padding-bottom: 15%;
-  margin: 10px;
   color: white;
   font-size: 30px;
   font-family: "NPSfontBold";
@@ -53,19 +62,17 @@
   justify-content: center;
   align-items: center;
   font-size: 16px;
+}
 
-  a {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: center;
-    align-items: center;
-
-    color: #000000;
-    font-family: "NPSfontBold";
-    text-decoration: none;
-  }
+.booking-box a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  align-items: center;
+  color: #000000;
+  text-decoration: none;
+  font-family: "NPSfontBold";
 }
 
 .TeamFind {
@@ -105,34 +112,33 @@
   margin-top: 5%;
   display: flex;
   flex-direction: row;
-
-  padding: 0 5%;
 }
 
 .Board-right {
   width: 50%;
   display: flex;
   flex-direction: column;
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    margin-bottom: 10%;
-    font-family: "NPSfontBold";
-  }
+}
+
+.Board-right a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  margin-bottom: 10%;
+  font-family: "NPSfontBold";
 }
 .Board-left {
   width: 50%;
-
   display: flex;
   flex-direction: column;
   border-right: 1px solid #dedede;
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    font-family: "NPSfontBold";
-  }
+}
+
+.Board-left a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  font-family: "NPSfontBold";
 }
 .PlayDay {
   display: flex;
@@ -149,14 +155,12 @@
 .rv-first {
   margin-top: 5%;
   display: flex;
-
   justify-content: space-around;
 }
 
 .rv-second {
   margin-top: 5%;
   display: flex;
-
   justify-content: space-around;
 }
 
@@ -185,7 +189,7 @@
 }
 .rank-table {
   width: 100%;
-  margin-top: 5%;
+  margin-top: 3%;
   border: 1px solid black;
   border-collapse: collapse;
 }
