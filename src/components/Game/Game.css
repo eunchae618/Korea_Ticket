@@ -1,5 +1,4 @@
 .Game {
-  background-color: #ffffffe6;
   margin: 20px 0; /*물체 밖 여백 줌*/
   border: 1px solid #acacac; /*물체 밖 선 그림. 박스*/
   height: 250px; /*세로*/
@@ -9,42 +8,46 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "NPSfontBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 .gmImage {
   /* k리그 로고*/
-  height: 90px; /*세로*/
-  width: 100px; /*가로*/
+  height: 30%; /*세로*/
+  width: 60%; /*가로*/
   display: flex;
-  padding-top: 30px;
+  padding-top: 10%;
 }
 
 .game-left {
   /*경기 시간 & 날짜 & 위치*/
   line-height: 2;
-  margin-bottom: 18px;
-  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: left;
   flex-direction: column;
-  width: 20%; /*가로길이*/
-  height: 100%; /*세로길이*/
-  justify-content: right;
   text-align: left;
-  padding-left: 30px;
+  padding-left: 5%;
 }
 
 .time {
-  /* padding-left: 30px; */
+  font-family: "NPSfontBold";
   margin-bottom: 8px;
   font-size: 21px;
 }
 
 .date {
-  /* padding-left: 30px; */
+  font-family: "NPSfontBold";
   margin-bottom: 8px;
   font-size: 15px;
 }
 
 .stadium {
+  font-family: "NPSfontBold";
   font-size: 13px;
 }
 
@@ -52,7 +55,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
   width: 60%;
   height: 100%;
 }
@@ -64,17 +66,17 @@
   justify-content: center; /*찐가운데정렬*/
   height: 100%;
   width: 40%;
-  background-color: rgb(255, 255, 255);
 }
 
-.juI {
-  /*전북 이미지*/
-  height: 80px;
-  width: 80px;
+.hoM {
+  /*홈 로고*/
+  height: 40%;
+  width: 40%;
 }
 
 .jb {
   /*전북 글씨*/
+  font-family: "NPSfontBold";
   font-weight: bold;
 }
 
@@ -85,10 +87,6 @@
   justify-content: center;
   height: 100%;
   width: 20%;
-  background-color: rgb(255, 255, 255);
-}
-.vs {
-  background-color: rgb(255, 255, 255);
 }
 
 .game-center-right {
@@ -98,22 +96,21 @@
   justify-content: center;
   height: 100%;
   width: 40%;
-  background-color: rgb(255, 255, 255);
 }
 
-.woI {
-  /*울산 이미지*/
-  height: 80px;
-  width: 80px;
+.awY {
+  /*어웨이 로고*/
+  height: 40%;
+  width: 40%;
 }
 
 .wo {
   /*울산 글씨*/
+  font-family: "NPSfontBold";
   font-weight: bold;
 }
 
 .game-right {
-  background-color: rgb(255, 255, 255);
   width: 20%;
   height: 100%;
 }

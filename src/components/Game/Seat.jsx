@@ -1,5 +1,19 @@
 import React, { useState } from "react";
 import "./Seat.css";
+import JBS from "../../assets/images/seatimg/jeonbukS.png";
+
+// 대구 import DGS from "../../assets/images/seatimg/daeguS.png"
+// 대전 import DJS from "../../assets/images/seatimg/daejeonS.png"
+// 강원 import GWS from "../../assets/images/seatimg/gangwonS.png"
+// 광주 import GJS from "../../assets/images/seatimg/gwangjuS.png"
+// 인천 import ICS from "../../assets/images/seatimg/incheonS.png"
+// 제주 import JUS from "../../assets/images/seatimg/jejuS.png"
+// 전북 import JBS from "../../assets/images/seatimg/jeonbukS.png"
+// 김천 import KCS from "../../assets/images/seatimg/kimcheonS.png"
+// 포항 import POS from "../../assets/images/seatimg/pohangS.png"
+// 서울 import SES from "../../assets/images/seatimg/seoulS.png"
+// 수원 import SWS from "../../assets/images/seatimg/suwonS.png"
+// 울산 import ULS from "../../assets/images/seatimg/ulsanS.png"
 
 const Seat = () => {
   const [selectedSeat, setSelectedSeat] = useState(""); // 초기값을 ""로 설정
@@ -11,11 +25,7 @@ const Seat = () => {
   return (
     <div className="tk">
       <p className="kk">🎫 전북 VS 울산 티켓 예매하기</p>
-      <img
-        src="https://hyundai-motorsfc.com/img/seat_2024.f98e5d45.jpeg"
-        alt="구장이미지"
-        className="tkI"
-      />
+      <img src={JBS} alt="구장이미지" className="tkI" />
       <div>
         <div className="Seat-choose">
           <select value={selectedSeat} onChange={handleSelectChange}>

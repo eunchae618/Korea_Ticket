@@ -5,17 +5,9 @@
   margin: 20px 0; /*물체 밖 위에 공간 20px 주기*/
 }
 
-@font-face {
-  font-family: "NPSfontBold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2")
-    format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
 .kk {
   /*맨 위에 vs */
-  font-family: "NPSfontBold";
+  padding-left: 5%;
   background-color: rgb(255, 255, 255);
   padding-top: 10px;
   width: 30%;
@@ -26,8 +18,8 @@
 
 .tkI {
   /*구장 이미지*/
-  width: 60%;
-  height: 70%;
+  width: 50%;
+  height: 60%;
 }
 
 .Seat-choose {
