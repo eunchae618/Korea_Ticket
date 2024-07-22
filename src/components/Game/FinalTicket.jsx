@@ -1,6 +1,21 @@
 import React, { useState } from "react";
 import "./FinalTicket.css";
 import { Link } from "react-router-dom";
+import JBL from "../../assets/images/TeamLogo/JeonBuk.png"; //홈 구장 로고
+import USL from "../../assets/images/TeamLogo/UlSan.png"; // 어웨이 구장 로고
+
+// 대구 import DGS from "../../assets/images/TeamLogo/Daegu.png
+//  대전 import DJS from "../../assets/images/TeamLogo/DaeJeon.png
+//  강원 import GWS from "../../assets/images/TeamLogo/Gangwon.png
+//  광주 import GJS from "../../assets/images/TeamLogo/Gangwon.png
+//  인천 import ICS from "../../assets/images/TeamLogo/Incheon.png
+//  제주 import JUS from "../../assets/images/TeamLogo/Jeju.png
+//  전북 import JBS from "../../assets/images/TeamLogo/JeonBuk.png
+//  김천 import KCS from "../../assets/images/TeamLogo/Gimcheon.png
+// 포항 import POS from "../../assets/images/TeamLogo/Pohang.png
+// 서울 import SES from "../../assets/images/TeamLogo/Seoul.png
+//  수원 import SWS from "../../assets/images/TeamLogo/Suwon.png
+//  울산 import ULS from "../../assets/images/TeamLogo/UlSan.png
 
 const FinalTicket = () => {
   const [selectedPeople, setSelectedPeople] = useState(1);
@@ -23,7 +38,7 @@ const FinalTicket = () => {
         <div className="Confirmation-right-left">
           <div className="er">
             <img
-              src="https://blog.kakaocdn.net/dn/caJIG3/btqystWn77G/qSsCPcDD4w4oMkrKmkiZGK/img.jpg"
+              src={JBL}
               alt="로고1" //전북
               className="logo-left"
             />
@@ -32,7 +47,7 @@ const FinalTicket = () => {
             </div>
 
             <img
-              src="https://th.bing.com/th/id/OIP.shn6rgirzpNZ7IdT9p39WAHaI6?rs=1&pid=ImgDetMain"
+              src={USL}
               alt="로고2" //울산
               className="logo-right"
             />
