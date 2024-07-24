@@ -1,38 +1,82 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState, useRef, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import "./custom-quill.css";
 import "./ReviewWrite.css";
 
 const ReviewWrite = () => {
   const navigate = useNavigate();
 
-  const [board, setBoard] = useState({
-    title: "",
-    contents: "",
-  });
+  const [reviewTitle, setTitle] = useState("");
+  const [reviewContent, setReviewContent] = useState("");
 
-  const { title, contents } = board;
+  const quillRef = useRef(null);
 
-  const onChange = (event) => {
-    const { value, name } = event.target;
-    setBoard({
-      ...board,
-      [name]: value,
+  const handleChange = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const imageHandler = () => {
+    const input = document.createElement("input");
+    input.setAttribute("type", "file");
+    input.setAttribute("accept", "image/*");
+    input.click();
+
+    input.addEventListener("change", async () => {
+      const file = input.files[0];
+
+      try {
+        const res = await axios.post("reviews/uploadImage", { img: file });
+        console.log("Response:", res.data);
+        const imgUrl = res.data.imgUrl;
+        const editor = quillRef.current.getEditor();
+        const range = editor.getSelection();
+        editor.insertEmbed(range.index, "image", imgUrl);
+        editor.setSelection(range.index + 1);
+      } catch (error) {
+        console.log(error);
+      }
     });
   };
 
-  const saveBoard = async () => {
+  const modules = useMemo(
+    () => ({
+      toolbar: {
+        container: [
+          ["image"],
+          [{ header: [1, 2, 3, 4, 5, false] }],
+          ["bold", "underline"],
+        ],
+        handlers: { image: imageHandler },
+      },
+    }),
+    []
+  );
+
+  const handleEditorChange = (content) => {
+    setReviewContent(content);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const reviewData = {
+      title: reviewTitle,
+      content: reviewContent,
+    };
+
     try {
-      await axios
-        .post("http://localhost:3000/reviews", {
-          title: board.title,
-          contents: board.contents,
-        })
-        .alert("작성되었습니다.");
-      navigate("/review-board");
+      const res = await axios.post(
+        "http://localhost:3000/reviews/write",
+        reviewData
+      );
+      console.log("Response:", res.data);
+      // 성공 시 필요한 작업 수행 (예: 성공 메시지 표시 또는 페이지 이동)
     } catch (error) {
-      console.error("Error posting the board data:", error);
-      alert("게시물을 저장하는 중 오류가 발생했습니다.");
+      console.error("There was an error submitting the review!", error);
+      // 실패 시 필요한 작업 수행 (예: 에러 메시지 표시)
     }
   };
 
@@ -53,47 +97,31 @@ const ReviewWrite = () => {
         <div className="ReviewWrite-page_title">후기 남기기</div>
       </div>
 
-      <div className="ReviewWrite-body">
+      <form onSubmit={handleSubmit} className="ReviewWrite-body">
         <div className="ReviewWrite-input_title">
-          <div>제목&ensp;</div>
+          제목&ensp;
           <input
             type="text"
-            name="title"
-            value={title}
-            onChange={onChange}
-            className="ReviewWrite-title_box"
+            value={reviewTitle}
+            onChange={handleChange}
+            class="ReviewWrite-title_box"
           />
         </div>
-
         <div className="ReviewWrite-input_content">
-          <div>내용&ensp;</div>
-          <textarea
-            name="contents"
-            cols="30"
-            rows="10"
-            value={contents}
-            onChange={onChange}
+          내용&ensp;
+          <ReactQuill
+            value={reviewContent}
+            onChange={handleEditorChange}
+            modules={modules}
             className="ReviewWrite-content_box"
-          ></textarea>
-        </div>
-
-        <div className="ReviewWrite-input_image">
-          <input
-            type="file"
-            accept="image/*,.txt"
-            multiple
-            required
-            capture="user"
-            onchange="aaa"
           />
         </div>
-      </div>
-
-      <div class="ReviewWrite-confirm_button">
-        <button onClick={saveBoard} className="ReviewWrite-button">
-          작성
-        </button>
-      </div>
+        <div class="ReviewWrite-confirm_button">
+          <button type="submit" className="ReviewWrite-button">
+            작성
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

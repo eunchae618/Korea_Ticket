@@ -1,34 +1,33 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./ReviewBoard.css";
 import axios from "axios";
-import thumbex1 from "../assets/images/review/ETO.png";
-import thumbex2 from "../assets/images/review/KDB.png";
-import thumbex3 from "../assets/images/review/siu.png";
-import thumbex4 from "../assets/images/review/son.png";
 import noprofile from "../assets/images/review/noprofile.png";
+import DefaultImage from "../assets/images/review/son.png";
 
 const ReviewBoard = () => {
   const navigate = useNavigate();
   const [boardList, setBoardList] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1); // 총 페이지 수 상태
 
-  const getBoardList = async () => {
+  const getBoardList = async (page) => {
     try {
-      const resp = await axios.get("http://localhost:3000/reviews"); // 게시글 데이터 링크
+      const resp = await axios.get(
+        `http://localhost:3000/reviews?page=${page}`
+      ); // 페이지 번호에 따라 URL 동적 설정
       const respData = resp.data;
-      const boardData = respData.data;
 
-      const boardList = boardData.map((post) => ({
-        thumbnail: post.thumbnail,
+      const boardList = respData.reviewPosts.map((post) => ({
+        id: post.id,
+        thumbnail: post.reviewImages[0],
         title: post.title,
-        author: post.author,
-        createdAt: new Date(post.created_at).toLocaleString(), // 날짜 포맷 변환
+        author: post.writtenBy,
+        createdAt: new Date(post.createdAt).toLocaleString(), // 날짜 포맷 변환
       }));
 
-      setBoardList(boardList); // boardList 변수에 할당
-
-      const pagination = respData.pagination;
-      console.log(pagination);
+      setBoardList(boardList); // 알아서 id 내림차순으로 정렬됨
+      setTotalPages(respData.pagination.totalPages); // 총 페이지 수 업데이트
     } catch (error) {
       console.error("Error getting board data:", error);
     }
@@ -36,6 +35,19 @@ const ReviewBoard = () => {
 
   const moveToWrite = () => {
     navigate("/reviewWrite");
+  };
+
+  const handlePageChange = (newPage) => {
+    setPage(newPage);
+    getBoardList(newPage);
+  };
+
+  useEffect(() => {
+    getBoardList(page);
+  }, [page]);
+
+  const addDefaultImg = (e) => {
+    e.tartget.src = DefaultImage;
   };
 
   return (
@@ -48,12 +60,21 @@ const ReviewBoard = () => {
         <h4>search</h4>
       </div>
 
-      <div className="ReveiwBoard-list">
-        <div className="ReviewBoard-list-row1">
-          <div>
-            <img className="thumb1" src={thumbex1} alt="thumb1" />
+      <div className="ReviewBoard-list">
+        {boardList.map((post) => (
+          <Link
+            to={`/reviews/${post.id}`}
+            className="ReviewBoard-item"
+            key={post.id}
+          >
+            <img
+              className="thumb"
+              src={post.thumbnail}
+              onError={addDefaultImg}
+              alt="thumb"
+            />
             <div className="ReviewBoard-post">
-              <div className="ReviewBoard-post-title">공지 공지제목</div>
+              <div className="ReviewBoard-post-title">{post.title}</div>
               <div className="ReviewBoard-post-content">
                 <img
                   className="ReviewBoard-noprofile"
@@ -61,67 +82,31 @@ const ReviewBoard = () => {
                   alt="no profile"
                 />
                 <div>
-                  <div>닉네임</div>
-                  <div>날짜</div>
+                  <div>{post.author}</div>
+                  <div>{post.createdAt}</div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <img className="thumb2" src={thumbex2} alt="thumb2" />
-            <div className="ReviewBoard-post">
-              <div className="ReviewBoard-post-title">공지 공지제목</div>
-              <div className="ReviewBoard-post-content">
-                <img
-                  className="ReviewBoard-noprofile"
-                  src={noprofile}
-                  alt="no profile"
-                />
-                <div>
-                  <div>닉네임</div>
-                  <div>날짜</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          </Link>
+        ))}
+      </div>
 
-        <div className="ReviewBoard-list-row2">
-          <div>
-            <img className="thumb3" src={thumbex3} alt="thumb3" />
-            <div className="ReviewBoard-post">
-              <div className="ReviewBoard-post-title">공지 공지제목</div>
-              <div className="ReviewBoard-post-content">
-                <img
-                  className="ReviewBoard-noprofile"
-                  src={noprofile}
-                  alt="no profile"
-                />
-                <div>
-                  <div>닉네임</div>
-                  <div>날짜</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <img className="thumb4" src={thumbex4} alt="thumb4" />
-            <div className="ReviewBoard-post">
-              <div className="ReviewBoard-post-title">공지 공지제목</div>
-              <div className="ReviewBoard-post-content">
-                <img
-                  className="ReviewBoard-noprofile"
-                  src={noprofile}
-                  alt="no profile"
-                />
-                <div>
-                  <div>닉네임</div>
-                  <div>날짜</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="ReviewBoard-pagination">
+        <button
+          onClick={() => handlePageChange(page - 1)}
+          disabled={page === 1}
+        >
+          이전
+        </button>
+        <span>
+          {page} / {totalPages}
+        </span>
+        <button
+          onClick={() => handlePageChange(page + 1)}
+          disabled={page === totalPages}
+        >
+          다음
+        </button>
       </div>
 
       <div className="ReviewBoard-write_button">

@@ -1,12 +1,12 @@
 .ReviewWrite {
-  padding: 0 120px;
+  padding: 0 9%;
 }
 .ReviewWrite-head {
   display: flex;
   flex-direction: column;
   align-items: start;
   padding-top: 3%;
-  padding-bottom: 10px;
+  padding-bottom: 1%;
   border-bottom: 1px solid grey;
 }
 .ReviewWrite-back_to_list {
@@ -35,16 +35,12 @@
   display: flex;
   justify-content: start;
   margin-top: 1%;
+  margin-bottom: 8%;
 }
 .ReviewWrite-content_box {
-  width: 90%;
-  height: 300px;
-  border-radius: 5px;
-}
-.ReviewWrite-input_image {
-  display: flex;
-  justify-content: start;
-  margin: 1% 4%;
+  width: 90.5%;
+  height: 700px;
+  margin-top: -10px;
 }
 .ReviewWrite-confirm_button {
   display: flex;

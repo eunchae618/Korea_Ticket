@@ -10,21 +10,20 @@
 .ReviewBoard-list {
   display: flex;
   justify-content: center;
+  justify-content: space-around;
   margin: 0 20%;
-  justify-content: space-around;
+  flex-wrap: wrap;
 }
-.ReviewBoard-list-row1 {
+.ReviewBoard-item {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  width: 40%;
   margin-bottom: 4%;
-}
-.ReviewBoard-list-row2 {
-  display: flex;
-  justify-content: space-around;
+  cursor: pointer;
 }
 .ReviewBoard-noprofile {
-  width: 10%;
-  height: 10%;
+  width: 8%;
+  height: 8%;
 }
 .ReviewBoard-post {
   padding: 0 9%;
@@ -39,22 +38,7 @@
   display: flex;
   justify-content: start;
 }
-.thumb1 {
-  object-fit: cover;
-  width: 340px;
-  height: 230px;
-}
-.thumb2 {
-  object-fit: cover;
-  width: 340px;
-  height: 230px;
-}
-.thumb3 {
-  object-fit: cover;
-  width: 340px;
-  height: 230px;
-}
-.thumb4 {
+.thumb {
   object-fit: cover;
   width: 340px;
   height: 230px;

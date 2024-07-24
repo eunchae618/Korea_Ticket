@@ -1,0 +1,10 @@
+.ql-toolbar.ql-snow {
+  display: flex;
+  justify-content: start;
+  border: 2px solid;
+  border-radius: 5px;
+}
+.ql-container.ql-snow {
+  border: 2px solid;
+  border-radius: 5px;
+}
