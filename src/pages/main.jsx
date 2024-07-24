@@ -257,53 +257,53 @@ const main = () => {
             </div>
           </div>
         </div>
-        <div className="rank-wrapper">
-          <div className="rank-title">🏆 순위표</div>
-          <table className="rank-table">
-            <thead>
-              <tr>
-                <th scope="col">순위</th>
-                <th scope="col" colSpan={2}>
-                  팀명
-                </th>
-                <th>경기 수</th>
-                <th>승</th>
-                <th>무</th>
-                <th>패</th>
-                <th>득</th>
-                <th>실</th>
-                <th>승점</th>
-              </tr>
-            </thead>
-            <tbody>
-              {teamData.map((team, index) => (
-                <tr key={index} className="tr-border">
-                  <td>{team.rank}</td>
-                  <td></td>
-                  <td>
-                    <div className="tr-team">
-                      <img
-                        className="team-png"
-                        style={{ width: "30px", height: "30px" }}
-                        src={team.img}
-                        alt={team.name}
-                      />
-                      <span>{team.name}</span>
-                    </div>
-                  </td>
+      </div>
+      <div className="rank-wrapper">
+        <div className="rank-title">🏆 순위표</div>
+        <table className="rank-table">
+          <thead>
+            <tr>
+              <th scope="col">순위</th>
+              <th scope="col" colSpan={2}>
+                팀명
+              </th>
+              <th>경기 수</th>
+              <th>승</th>
+              <th>무</th>
+              <th>패</th>
+              <th>득</th>
+              <th>실</th>
+              <th>승점</th>
+            </tr>
+          </thead>
+          <tbody>
+            {teamData.map((team, index) => (
+              <tr key={index} className="tr-border">
+                <td>{team.rank}</td>
+                <td></td>
+                <td>
+                  <div className="tr-team">
+                    <img
+                      className="team-png"
+                      style={{ width: "30px", height: "30px" }}
+                      src={team.img}
+                      alt={team.name}
+                    />
+                    <span>{team.name}</span>
+                  </div>
+                </td>
 
-                  <td>{team.play}</td>
-                  <td>{team.win}</td>
-                  <td>{team.draw}</td>
-                  <td>{team.lose}</td>
-                  <td>{team.goal}</td>
-                  <td>{team.min}</td>
-                  <td>{team.wc}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+                <td>{team.play}</td>
+                <td>{team.win}</td>
+                <td>{team.draw}</td>
+                <td>{team.lose}</td>
+                <td>{team.goal}</td>
+                <td>{team.min}</td>
+                <td>{team.wc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
       <Footer />
     </div>
