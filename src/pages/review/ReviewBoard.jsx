@@ -25,7 +25,7 @@ const ReviewBoard = () => {
     async (page) => {
       try {
         const resp = await axios.get(
-          `http://13.125.77.62/reviews?search=${query}&page=${page}`
+          `http://localhost3000/reviews?search=${query}&page=${page}`
         ); // 페이지 번호와 검색어에 따라 URL 동적 설정
         const respData = resp.data;
 
