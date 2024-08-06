@@ -69,7 +69,7 @@ const ReviewWrite = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost3000/reviews/write",
+        "http://localhost:3000/reviews/write",
         reviewData
       );
       console.log("Response:", res.data);
