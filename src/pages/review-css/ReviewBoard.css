@@ -1,11 +1,24 @@
 .ReviewBoard {
-  padding: 0 120px;
+  padding: 0 8%;
 }
 .ReviewBoard-info {
   display: flex;
   justify-content: space-between;
   margin-top: 3%;
   margin-bottom: 1%;
+}
+.ReviewBoard-form-search {
+  display: flex;
+}
+.ReviewBoard-submit_search {
+  height: 21.6px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.ReviewBoard-search_icon {
+  width: 18px;
+  height: 18px;
 }
 .ReviewBoard-list {
   display: flex;
@@ -19,11 +32,12 @@
   flex-direction: column;
   width: 40%;
   margin-bottom: 4%;
+  text-decoration: none;
   cursor: pointer;
 }
 .ReviewBoard-noprofile {
-  width: 8%;
-  height: 8%;
+  width: 25px;
+  height: 25px;
 }
 .ReviewBoard-post {
   padding: 0 9%;
@@ -34,11 +48,15 @@
   display: flex;
   justify-content: start;
 }
-.ReviewBoard-post-content {
+.ReviewBoard-post-created_by {
   display: flex;
   justify-content: start;
 }
-.thumb {
+.ReviewPost-title {
+  display: flex;
+  justify-content: center;
+}
+.ReviewBoard-thumb {
   object-fit: cover;
   width: 340px;
   height: 230px;

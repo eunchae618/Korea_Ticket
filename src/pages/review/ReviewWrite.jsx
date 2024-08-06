@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import "./custom-quill.css";
-import "./ReviewWrite.css";
+import "../review-css/review-quill.css";
+import "../review-css/ReviewWrite.css";
 
 const ReviewWrite = () => {
   const navigate = useNavigate();
@@ -28,9 +28,9 @@ const ReviewWrite = () => {
       const file = input.files[0];
 
       try {
-        const res = await axios.post("reviews/uploadImage", { img: file });
-        console.log("Response:", res.data);
-        const imgUrl = res.data.imgUrl;
+        const resp = await axios.post("reviews/uploadImage", { file });
+        console.log("Response:", resp.data);
+        const imgUrl = resp.data;
         const editor = quillRef.current.getEditor();
         const range = editor.getSelection();
         editor.insertEmbed(range.index, "image", imgUrl);
@@ -69,7 +69,7 @@ const ReviewWrite = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/reviews/write",
+        "http://13.125.77.62/reviews/write",
         reviewData
       );
       console.log("Response:", res.data);
@@ -92,7 +92,7 @@ const ReviewWrite = () => {
           className="ReviewWrite-back_to_list"
           style={{ cursor: "pointer" }}
         >
-          &lt; 후기 게시판
+          &lt; 목록으로
         </div>
         <div className="ReviewWrite-page_title">후기 남기기</div>
       </div>
@@ -104,7 +104,7 @@ const ReviewWrite = () => {
             type="text"
             value={reviewTitle}
             onChange={handleChange}
-            class="ReviewWrite-title_box"
+            className="ReviewWrite-title_box"
           />
         </div>
         <div className="ReviewWrite-input_content">

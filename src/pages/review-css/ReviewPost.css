@@ -1,0 +1,50 @@
+.ReviewPost {
+  display: flex;
+  justify-content: center;
+}
+.ReviewPost-head {
+  padding-bottom: 1%;
+  border-bottom: 1px solid;
+}
+.ReviewPost-back_to_list {
+  margin-right: auto;
+  text-decoration: underline;
+  color: #959595;
+}
+.ReviewPost-page_title:after {
+  content: "";
+  display: block;
+  width: 40px; /* 밑줄 길이 조절 */
+  border-bottom: 2px solid;
+  margin: 35px auto;
+}
+.ReviewPost-body {
+  display: flex;
+  flex-direction: column;
+}
+.ReviewPost-created_by {
+  margin-right: 10%;
+}
+.ReviewPost-noprofile {
+  object-fit: cover;
+  width: 340px;
+  height: 230px;
+}
+.ReviewPost-navigate_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.ReviewPost-button {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  color: #ee4e4e;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: #ee4e4e;
+  cursor: pointer;
+}
+.ReviewPost-button:hover {
+  background-color: #ee4e4e;
+  color: white;
+}
