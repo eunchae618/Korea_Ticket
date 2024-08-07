@@ -50,6 +50,7 @@
   align-items: center;
   background: rgba(0, 0, 0, 0.5);
   font-family: "NPSfontBold";
+  z-index: 1000;
 }
 
 .modal-content {

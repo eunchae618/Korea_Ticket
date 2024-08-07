@@ -13,11 +13,29 @@ body {
   overflow-x: hidden; /* 화면 너비 초과 방지 */
 }
 
-.main {
+.slick-prev:before,
+.slick-next:before {
+  background-color: white !important; /* 배경색 */
+  color: #ee4e4e !important; /* 화살표 색상 */
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev:before,
+.slick-next:before .main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.slick-dots li button:before {
+  color: #ee4e4e !important;
+}
+.slick-dots li.slick-active button:before {
+  color: #ee4e4e !important;
 }
 
 .Header-right {
@@ -103,7 +121,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   background: #ffffff;
-  border: 1px solid #b0b0b0;
+  border: 1px solid #ee4e4e;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   font-family: "NPSfontBold";
@@ -131,7 +149,7 @@ body {
   width: 50%;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #dedede;
+  border-right: 1px solid #ee4e4e;
 }
 
 .Board-left a {
@@ -148,7 +166,7 @@ body {
   font-size: 35px;
   height: 40%;
   margin-bottom: 5%;
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid #ee4e4e;
   font-family: "NPSfontBold";
 }
 
@@ -178,7 +196,6 @@ body {
 .rank-wrapper {
   width: 100%;
   height: 1000px;
-  padding: 0 10%;
 }
 .rank-title {
   font-size: 30px;
