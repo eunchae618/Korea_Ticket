@@ -9,7 +9,7 @@ const ReviewPost = ({ author, title, content, date }) => {
     navigate("../reviewWrite");
   };
   const backToList = () => {
-    navigate("../");
+    navigate(-1);
   };
 
   return (

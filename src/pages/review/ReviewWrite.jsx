@@ -23,20 +23,26 @@ const ReviewWrite = () => {
     input.setAttribute("type", "file");
     input.setAttribute("accept", "image/*");
     input.click();
-
     input.addEventListener("change", async () => {
+      console.log("온체인지");
       const file = input.files[0];
+      const formData = new FormData();
+      formData.append("img", file);
 
       try {
-        const resp = await axios.post("reviews/uploadImage", { file });
-        console.log("Response:", resp.data);
-        const imgUrl = resp.data;
+        const result = await axios.post(
+          "http://localhost:3000/reviews/uploadImage",
+          formData
+        );
+        console.log(result.data);
+        const IMG_URL = result.data;
         const editor = quillRef.current.getEditor();
+        // 현재 에디터 커서 위치값을 가져온다
         const range = editor.getSelection();
-        editor.insertEmbed(range.index, "image", imgUrl);
-        editor.setSelection(range.index + 1);
+        // 가져온 위치에 이미지를 삽입한다
+        editor.insertEmbed(range.index, "image", IMG_URL);
       } catch (error) {
-        console.log(error);
+        console.log("Error getting image URL:");
       }
     });
   };

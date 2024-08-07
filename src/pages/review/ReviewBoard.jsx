@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 import imgNoProfile from "../../assets/images/review/noprofile.png";
 import DefaultImage from "../../assets/images/review/son.png";
 import SearchIcon from "../../assets/images/review/search.png";
@@ -30,7 +32,7 @@ const ReviewBoard = () => {
         const respData = resp.data;
 
         const postData = respData.reviewPosts.map((post) => ({
-          id: post.id,
+          id: post.postId,
           thumbnail: post.reviewImages[0],
           title: post.title,
           author: post.writtenBy,
@@ -59,20 +61,15 @@ const ReviewBoard = () => {
     navigate("/reviewWrite");
   };
 
-  const handlePageChange = (newPage) => {
-    if (newPage > 0 && newPage <= totalPages) {
-      setPage(newPage);
-    }
+  const handlePageChange = (event, value) => {
+    setPage(value);
+    getBoardList(value);
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault(); // 폼 제출 시 페이지 새로고침 방지
     setPage(1); // 검색 시 첫 페이지로 이동
     getBoardList(1); // 검색어로 데이터를 새로 가져오기
-  };
-
-  const addDefaultImg = (e) => {
-    e.target.src = DefaultImage;
   };
 
   return (
@@ -108,8 +105,7 @@ const ReviewBoard = () => {
               className="ReviewBoard-item"
             >
               <img
-                src={post.thumbnail}
-                onError={addDefaultImg}
+                src={post.thumbnail || DefaultImage}
                 alt="thumb"
                 className="ReviewBoard-thumb"
               />
@@ -136,21 +132,13 @@ const ReviewBoard = () => {
       </div>
 
       <div className="ReviewBoard-pagination">
-        <button
-          onClick={() => handlePageChange(page - 1)}
-          disabled={page === 1}
-        >
-          이전
-        </button>
-        <span>
-          {page} / {totalPages}
-        </span>
-        <button
-          onClick={() => handlePageChange(page + 1)}
-          disabled={page === totalPages}
-        >
-          다음
-        </button>
+        <Stack spacing={2}>
+          <Pagination
+            count={totalPages}
+            page={page}
+            onChange={handlePageChange}
+          />
+        </Stack>
       </div>
 
       <div className="ReviewBoard-write_button">

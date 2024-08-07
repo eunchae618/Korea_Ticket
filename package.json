@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@editorjs/editorjs": "^2.30.2",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^5.16.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -24,7 +27,6 @@
   },
   "proxy": "http://localhost:3000",
   "scripts": {
-    "start": "react-scripts start",
     "start": "react-scripts --max-http-header-size=1024 start",
     "build": "react-scripts build",
     "test": "react-scripts test",

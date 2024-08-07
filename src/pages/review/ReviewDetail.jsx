@@ -11,6 +11,7 @@ const ReviewDetail = () => {
   const getPost = useCallback(async () => {
     try {
       const resp = await axios.get(`http://localhost:3000/reviews/${id}`);
+      console.log(resp.data);
       const respData = resp.data;
 
       const postData = {

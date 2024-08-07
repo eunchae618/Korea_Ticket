@@ -26,9 +26,8 @@
   margin-right: 10%;
 }
 .ReviewPost-noprofile {
-  object-fit: cover;
-  width: 340px;
-  height: 230px;
+  width: 25px;
+  height: 25px;
 }
 .ReviewPost-navigate_buttons {
   display: flex;

@@ -61,6 +61,10 @@
   width: 340px;
   height: 230px;
 }
+.ReviewBoard-pagination {
+  display: flex;
+  justify-content: center;
+}
 .ReviewBoard-write_button {
   display: flex;
   justify-content: end;
