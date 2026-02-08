@@ -1,3 +1,5 @@
+첫 웹사이트 제작.
+축구 일정, 예매, 커뮤니티 기능이 있는 사이트
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
